@@ -14,6 +14,7 @@ class Validator {
       'onlyletters',
       'onlynumbers',
       'onlynumbersCEP',
+      'cartao_valid'
     ]
   }
 
@@ -163,6 +164,29 @@ class Validator {
     }
     if ((quantos_anos >= idadeMax)){
       this.printMessage(input, errorMessageMax);
+    }
+  }
+
+  cartao_valid(input, inputName) {
+    let cartaoSelecionado  = document.getElementsByName(inputName)[0];
+    let tipoCartao  = document.getElementsByName(inputName)[0];
+    let errorMessage = `O cartão é invalido`;
+    let validar = false
+    var cartoes = {
+      Visa: /^4[0-9]{12}(?:[0-9]{3})/,
+      Mastercard: /^5[1-5][0-9]{14}/,
+      Amex: /^3[47][0-9]{13}/,
+      DinersClub: /^3(?:0[0-5]|[68][0-9])[0-9]{11}/,
+      Discover: /^6(?:011|5[0-9]{2})[0-9]{12}/,
+      JCB: /^(?:2131|1800|35\d{3})\d{11}/
+    };
+    
+    for (var cartao in cartoes) 
+    if (nr.match(cartoes[cartao])) validar = true
+
+
+    if(validar =  false) {
+      this.printMessage(input, errorMessage);
     }
   }
 

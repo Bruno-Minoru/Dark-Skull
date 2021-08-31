@@ -45,32 +45,32 @@
       <!-- CEP -->
       <div class="full-box">
         <label for="Nome">Nome</label>
-        <input type="text" name="nome" id="Nome" placeholder="Ex: Camisata baby Yoda"> 
+        <input type="text" name="nome" id="Nome" placeholder="Ex: Camisata baby Yoda" data-required> 
       </div>
       <!-- Logrodouro -->
       <div class="half-box spacing">
         <label for="DataVenda">Data de Venda</label>
-        <input type="date" name="dataVenda" id="DataVenda" placeholder="02/02/2001">
+        <input type="date" name="dataVenda" id="DataVenda" placeholder="02/02/2001" data-required onlynumbers>
       </div>
       <!-- Bairro -->
       <div class="half-box">
         <label for="valor">Valor</label>
-        <input type="text" name="valor" id="valor" placeholder="R$ 50,00">
+        <input type="text" name="valor" id="valor" placeholder="R$ 50,00" data-required onlynumbers>
       </div>
       <!-- Cidade -->
-      <div class="half-box spacing">
+      <div class="half-box spacing" data-required data-min-length="11"  onlynumbers>
         <label for="quantidade">Quantidade</label>
-        <input type="text" name="quantidade" id="Quantidade" placeholder="5">
+        <input type="text" name="quantidade" id="Quantidade" placeholder="5" data-required onlynumbers>
       </div>
       <!-- Estado -->
       <div class="half-box">
         <label for="tamanho">Tamanho</label>
-        <input type="text" name="tamanho" id="Tamanho" placeholder="GG">
+        <input type="text" name="tamanho" id="Tamanho" placeholder="GG" data-required>
       </div>
       <!-- Complemento -->
       <div class="full-box">
         <label for="descricao">Descrição</label>
-        <input type="text" name="descricao" id="Descricao" placeholder="Tecido de Algodão">
+        <input type="text" name="descricao" id="Descricao" placeholder="Tecido de Algodão" data-required >
       </div>
 
       
@@ -91,6 +91,10 @@
 
     </form>
   </div>
+
+    <!-- texto da validação retorno -->
+    <p class="error-validation template"></p>
+    <script src="js/validacao.js"></script>
 
     <!-- JavaScript Libraries --> 
     <script src="js/jquery-3.4.1.min.js"></script> <!-- necessario para fazer a animação de Troca da Tabela-->

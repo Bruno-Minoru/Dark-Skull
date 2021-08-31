@@ -12,6 +12,7 @@
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/MinhaConta.css" rel="stylesheet">
+        <link href="css/Cadastro.css"  rel="stylesheet"> 
         
     </head>
 
@@ -117,7 +118,7 @@
                                 <h5>Cartão de Credito Associado</h5>
                                 <p></p>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <!-- <div class="col-md-12">
                                         <input class="form-control" type="text" placeholder="Nome Complemento">
                                     </div>
                                     <div class="col-md-6">
@@ -132,7 +133,7 @@
                                     <div class="col-md-12">
                                         <a href="Alterar_Cartao.html"><button class="btn">Novo</button></a>
                                         <br><br>
-                                    </div>
+                                    </div> -->
                                     <p></p>
                                     <p></p>
                                     <p></p>
@@ -168,6 +169,15 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+
+                                <a href="Alterar_Cartao.html"><button class="btn" style="right: auto;;">Adicionar Cartão</button></a>
+
+                                
                             </div>
                             <div class="tab-pane fade" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
                                 <div class="row">
@@ -229,44 +239,48 @@
                             <div class="tab-pane fade" id="account-tab" role="tabpanel" aria-labelledby="account-nav">
                                 <h4>Detalhes da Conta</h4>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Nome Completo">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Telefone">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Data de Nascimento">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button class="btn">Atualizar</button>
-                                        <br><br>
-                                    </div>
+                                    <form id="accont-form" action="" method="GET">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="text" placeholder="Nome Completo" re>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="text" placeholder="Telefone">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="text" placeholder="Data de Nascimento">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="text" placeholder="Email">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="btn">Atualizar</button>
+                                                <br><br>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="password-tab" role="tabpanel" aria-labelledby="account-nav">
                                 <h4>Alterar Senha</h4>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <input class="form-control" type="password" placeholder="Senha Atual">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Nova Senha">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Confirmar Senha">
-                                    </div>
-                                    <div class="col-md-1">
-                                        <button class="btn">Salvar</button>
-                                        <br><br>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <button class="btn">Excluir</button>
-                                        <br><br>
-                                    </div>
+                                    <form id="password-form" action="" method="dialog">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input class="form-control" type="password" placeholder="Senha Atual" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="password" placeholder="Nova Senha" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="password" placeholder="Confirmar Senha" required>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button class="btn">Salvar</button>
+                                                <br><br>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -275,6 +289,10 @@
             </div>
         </div>
         <!-- My Account End -->    
+
+        <!-- texto da validação retorno -->
+        <p class="error-validation template"></p>
+        <script src="js/validacao.js"></script>
         
         <!-- JavaScript Libraries --> 
         <script src="js/jquery-3.4.1.min.js"></script> <!-- necessario para fazer a animação de Troca da Tabela-->

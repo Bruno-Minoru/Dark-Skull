@@ -45,12 +45,12 @@
       <!-- Nome Completo -->
       <div class="full-box">
         <label for="NomeCompleto">Nome Completo</label>
-        <input type="text" name="NomeCompleto" id="NomeCompleto" placeholder="Ex: Bruno abner" data-required  data-min-length="8" data-max-length="9" > 
+        <input type="text" name="NomeCompleto" id="NomeCompleto" placeholder="Ex: Bruno abner" data-required> 
       </div>
       <!-- Numero do Cartão -->
       <div class="full-box">
         <label for="NumeroCartao">Numero do Cartão</label>
-        <input type="text" name="NumeroCartao" id="NumeroCartao" placeholder="Ex: 0000-0000-0000-0000" data-required  data-min-length="8" data-max-length="9" > 
+        <input type="text" name="NumeroCartao" id="NumeroCartao" placeholder="Ex: 0000-0000-0000-0000" data-required> 
       </div>
       <!-- Codigo -->
       <div class="half-box spacing">
@@ -59,13 +59,18 @@
       </div>
       <!-- Bandeira -->
       <div class="half-box">
-        <label for="Bandeira">Bandeira</label>
-        <input type="text" name="Bandeira" id="Bandeira" placeholder="MasterCard" data-required>
+        <label for="Bandeira">Bandeiras</label>
+        <input type="text" name="Bandeira" id="Bandeira" placeholder="Bandeira" list="Bandeiras" data-required >
+        <datalist id="Bandeiras">
+          <option value="MasterCard">  
+          <option value="Visa">
+          <option value="VisaElectron">
+        </datalist>
       </div>
       <!-- Descricao -->
       <div class="full-box">
         <label for="Descricao">Descricao</label>
-        <input type="text" name="Descricao" id="Descricao" placeholder="Complemento : Opcional" data-required>
+        <input type="text" name="Descricao" id="Descricao" placeholder="Complemento : Opcional" >
       </div>
 
       <div class="full-box">
@@ -89,7 +94,9 @@
 
 
 
-  
+    <!-- texto da validação retorno -->
+    <p class="error-validation template"></p>
+    <script src="js/validacao.js"></script>
 
     <!-- JavaScript Libraries --> 
     <script src="js/jquery-3.4.1.min.js"></script> <!-- necessario para fazer a animação de Troca da Tabela-->
